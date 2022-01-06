@@ -1,5 +1,7 @@
 # Frontend Mentor - FAQ accordion card
 
+https://sudarsh1010.github.io/faq-accordion-card-main/ - live page link
+
 ![Design preview for the FAQ accordion card coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
