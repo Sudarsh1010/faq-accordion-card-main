@@ -1,23 +1,110 @@
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700;&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700;&display=swap");
 
 :root {
-    /* text colors */
-    --dark-desaturated-blue: hsl(238, 29%, 16%);
-    --soft-red: hsl(14, 88%, 65%);
+  /* text colors */
+  --text-blue: hsl(238, 29%, 16%);
+  --text-red: hsl(14, 88%, 65%);
 
-    --very-dark-grayish-blue: hsl(237, 12%, 33%);
-    --dark-grayish-blue: hsl(240, 6%, 50%);
+  --text-dark-blue: hsl(237, 12%, 33%);
+  --text-grayish-blue: hsl(240, 6%, 50%);
 
-    /* Background Gradient Color */
-    --soft-violet: hsl(273, 75%, 66%);
-    --soft-blue: hsl(240, 73%, 65%);
+  /* Background Gradient Color */
+  --gradient-violet: hsl(273, 75%, 66%);
+  --gradient-blue: hsl(240, 73%, 65%);
 
-    /* Dividers */
-    --light-grayish-blue: hsl(240, 5%, 91%);
+  /* Dividers */
+  --divider-blue: hsl(225, 65%, 80%);
+}
+
+html {
+  box-sizing: initial;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.card-box {
+  display: none;
 }
 
 body {
-    font-family: 'Kumbh Sans', sans-serif;
-    font-size: 12px;
+  min-height: 100vh;
+  background-image: linear-gradient(
+    var(--gradient-violet),
+    var(--gradient-blue)
+  );
+  margin: 0;
+  padding: 3rem;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
+.card {
+  background: #ffffff;
+  border-radius: 2rem;
+  max-width: 75rem;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  max-width: 25rem;
+}
+
+.card-text {
+}
+
+/* Media Queries */
+
+@media (min-width: 56em) {
+  .card {
+    position: relative;
+    display: flex;
+    margin: 6rem auto;
+    padding-right: 2rem;
+    background-image: url(/images/bg-pattern-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -35% center;
+  }
+
+  .card-image,
+  .card-text {
+    flex: 1;
+  }
+
+  .card-image {
+    max-width: 37.5rem;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .card-image img {
+    transform: translateX(-5rem);
+  }
+
+  .card-box {
+    /* display: block; */
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    left: 0;
+    transform: translateX(-49%) translateY(280%);
+    z-index: 1;
+    height: 50%;
+  }
+}
+
+.attribution {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.attribution a {
+  color: rgb(183, 255, 255);
+}
