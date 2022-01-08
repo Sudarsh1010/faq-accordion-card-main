@@ -27,10 +27,6 @@ html {
   box-sizing: inherit;
 }
 
-.card-box {
-  display: none;
-}
-
 body {
   min-height: 100vh;
   background-image: linear-gradient(
@@ -46,6 +42,8 @@ body {
   background: #ffffff;
   border-radius: 2rem;
   max-width: 75rem;
+  background-image: url(/images/bg-pattern-mobile.svg);
+  background-repeat: no-repeat;
 }
 
 .card-image {
@@ -66,9 +64,9 @@ body {
     margin: 6rem auto;
     padding-right: 2rem;
     background-image: url(/images/bg-pattern-desktop.svg);
-    background-size: cover;
+    background-size: 70rem;
     background-repeat: no-repeat;
-    background-position: -35% center;
+    background-position: -650% 65%;
   }
 
   .card-image,
@@ -86,17 +84,6 @@ body {
 
   .card-image img {
     transform: translateX(-5rem);
-  }
-
-  .card-box {
-    /* display: block; */
-    display: inline-block;
-    position: relative;
-    top: 50%;
-    left: 0;
-    transform: translateX(-49%) translateY(280%);
-    z-index: 1;
-    height: 50%;
   }
 }
 
